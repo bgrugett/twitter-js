@@ -10,7 +10,7 @@ function list () {
 }
 
 function find (properties) {
-  console.log(data)
+  //console.log(data)
   return _.cloneDeep(_.filter(data, properties));
 }
 
