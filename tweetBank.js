@@ -10,6 +10,7 @@ function list () {
 }
 
 function find (properties) {
+  console.log(data)
   return _.cloneDeep(_.filter(data, properties));
 }
 
@@ -22,8 +23,8 @@ const randArrayEl = function(arr) {
 
 const getFakeName = function() {
   const fakeFirsts = ['Nimit', 'David', 'Shanna', 'Emily', 'Scott', 'Karen', 'Ben', 'Dan', 'Ashi', 'Kate', 'Omri', 'Gabriel', 'Joe', 'Geoff'];
-  const fakeLasts = ['Hashington', 'Stackson', 'McQueue', 'OLogn', 'Ternary', 'Claujure', 'Dunderproto', 'Binder', 'Docsreader', 'Ecma'];
-  return randArrayEl(fakeFirsts) + " " + randArrayEl(fakeLasts);
+  // const fakeLasts = ['Hashington', 'Stackson', 'McQueue', 'OLogn', 'Ternary', 'Claujure', 'Dunderproto', 'Binder', 'Docsreader', 'Ecma'];
+  return randArrayEl(fakeFirsts) //+ " " + randArrayEl(fakeLasts);
 };
 
 const getFakeTweet = function() {
@@ -35,3 +36,4 @@ for (let i = 0; i < 10; i++) {
   module.exports.add( getFakeName(), getFakeTweet() );
 }
 //console.log(data);
+
