@@ -9,7 +9,14 @@ router.get('/', function (req, res) {
 });
 
 router.get('/stylesheets/style.css', function (req, res) {
-  res.sendfile("/static/stylesheets/style.css");
+  res.sendfile('/static/stylesheets/style.css');
+});
+
+router.get('/users/:name', function (req, res) {
+  let name = req.params.name;
+  let list = tweetBank.find( {name: name});
+  console.log('name ', name, ' list ', list);
+  res.render( 'index', { list } );
 });
 
 module.exports = router;
